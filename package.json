@@ -1,0 +1,27 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "cd ./hyperhire-api && node index.js",
+    "start-mobile": "cd ../react-native-assesment && npm start",
+    "start": "npm-run-all --parallel start-server start-mobile",
+    "install-server1": "cd ./pix-api && npm i",
+    "install-server2": "cd ../react-native-assesment && npm i",
+    "install": "npm run install-server1 && npm run install-server2",
+    "db:setup": "cd ./hyperhire-api && node db_setup.js",
+    "db:migrate": "cd ./hyperhire-api && npx sequelize-cli db:migrate",
+    "db:seed:all": "cd ./hyperhire-api && npx sequelize-cli db:seed:all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
